@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- SEO Primary -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>CNC Lathe | TKMC Mechanical Workshop – 3D Model & Engineering Drawing</title>
+  <meta name="description" content="Explore the interactive 3D CNC Lathe model from TKMC Mechanical Workshop. Rotate, zoom, pan and auto-fit the model. Download engineering drawings, process guides, and model question papers." />
+  <meta name="keywords" content="CNC lathe, mechanical workshop, 3D model, engineering drawing, TKMC, machinist, lathe operation, CNC machining, process guide" />
+  <meta name="author" content="Machinist Hands" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://machinisthands.blogspot.com/cncLathe/" />
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="CNC Lathe 3D Model | TKMC Mechanical Workshop" />
+  <meta property="og:description" content="Interactive 3D model of a CNC lathe with engineering drawing, process guide and sample questions." />
+  <meta property="og:image"       content="../images/mechanicalWorkshop.png" />
+  <meta property="og:url"         content="https://machinisthands.blogspot.com/cncLathe/" />
+  <meta property="og:site_name"   content="TKMC Mechanical Workshop" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="CNC Lathe 3D Model | TKMC Mechanical Workshop" />
+  <meta name="twitter:description" content="Interactive 3D model, engineering drawing, process guide and model questions for CNC Lathe." />
+  <meta name="twitter:image"       content="../images/mechanicalWorkshop.png" />
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"EducationalOrganization","name":"TKMC Mechanical Workshop","url":"https://machinisthands.blogspot.com","description":"Interactive 3D models and educational resources for mechanical engineering students.","offers":{"@type":"Course","name":"CNC Lathe Operation","educationalLevel":"Vocational"}}
+  </script>
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="../images/mechanicalWorkshopLogo.png" />
+  <link rel="apple-touch-icon"     href="../images/mechanicalWorkshopLogo.png" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
+  <!-- AdSense -->
+  <meta name="google-adsense-account" content="ca-pub-7727895345119500" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7727895345119500" crossorigin="anonymous"></script>
+
+  <style>
+    :root {
+      --bg:      #0a0900; --surface:#121108; --surface2:#1c1a08;
+      --border:  rgba(255,255,255,0.07);
+      --accent:  #d4a017; --accent2:#f0c040;
+      --text:    #e8e8e8; --muted:#8a8a9a;
+      --fhead:   'Rajdhani',sans-serif; --fbody:'Inter',sans-serif;
+      --radius:  10px; --shadow:0 8px 40px rgba(0,0,0,0.5); --tr:0.25s ease;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:var(--fbody);font-size:15px;line-height:1.6;overflow-x:hidden}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+
+    /* Loading */
+    #loading-screen{position:fixed;inset:0;background:var(--bg);display:flex;flex-direction:column;justify-content:center;align-items:center;z-index:99999;transition:opacity .5s ease}
+    #loading-screen.hidden{opacity:0;pointer-events:none}
+    .loader-logo{font-family:var(--fhead);font-size:1.4rem;font-weight:700;letter-spacing:.2em;color:var(--accent);margin-bottom:28px}
+    .loader-bar-wrap{width:200px;height:3px;background:var(--surface2);border-radius:2px;overflow:hidden}
+    .loader-bar{height:100%;width:0%;background:linear-gradient(90deg,#d4a017,#f0c040);border-radius:2px;animation:loadBar 1.8s ease forwards}
+    @keyframes loadBar{to{width:100%}}
+
+    /* Header */
+    #site-header{position:fixed;top:0;left:0;right:0;z-index:9000;background:rgba(13,13,15,.93);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:0 24px}
+    .header-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;height:62px;gap:20px}
+    .header-logo img{height:36px}
+    .nav-div{width:1px;height:24px;background:var(--border);flex-shrink:0}
+    .site-nav{display:flex;gap:4px;flex:1}
+    .site-nav a{font-family:var(--fhead);font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:6px 12px;border-radius:6px;transition:color var(--tr),background var(--tr)}
+    .site-nav a:hover,.site-nav a.active{color:var(--accent);background:rgba(212,160,23,.12)}
+    .hamburger{display:none;background:none;border:none;cursor:pointer;padding:6px;flex-direction:column;gap:5px}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:transform .3s,opacity .3s}
+    .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .hamburger.open span:nth-child(2){opacity:0}
+    .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .mobile-nav{display:none;flex-direction:column;background:var(--surface);border-top:1px solid var(--border);padding:12px 20px 20px}
+    .mobile-nav.open{display:flex}
+    .mobile-nav a{font-family:var(--fhead);font-weight:600;font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:10px 0;border-bottom:1px solid var(--border);transition:color var(--tr)}
+    .mobile-nav a:last-child{border-bottom:none}
+    .mobile-nav a:hover,.mobile-nav a.active{color:var(--accent)}
+
+    /* Slideshow */
+    #hero{margin-top:62px;position:relative;overflow:hidden}
+    .slide{display:none;position:relative}
+    .slide.active{display:block}
+    .slide img{width:100%;height:clamp(220px,45vw,520px);object-fit:cover;filter:brightness(.75);background:linear-gradient(135deg,#1e2028,#252b3a)}
+    .slide-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(13,13,15,.9) 0%,transparent 60%)}
+    .slide-indicators{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:10}
+    .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.3);cursor:pointer;transition:background var(--tr),transform var(--tr)}
+    .dot.active{background:var(--accent);transform:scale(1.3)}
+    .slide-nav-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.45);border:1px solid var(--border);color:var(--text);font-size:1.2rem;width:36px;height:36px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10;transition:background var(--tr)}
+    .slide-nav-btn:hover{background:var(--accent)}
+    .slide-nav-btn.prev{left:14px}
+    .slide-nav-btn.next{right:14px}
+
+    /* Layout */
+    .page-wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+    .section-label{display:inline-flex;align-items:center;gap:10px;font-family:var(--fhead);font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+    .section-label::before{content:'';display:block;width:28px;height:2px;background:var(--accent)}
+    .section-title{font-family:var(--fhead);font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:700;line-height:1.1;letter-spacing:.03em}
+
+    /* 3D Viewer */
+    #viewer-section{padding:56px 0 20px}
+    .viewer-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+    .viewer-topbar{display:flex;align-items:center;justify-content:space-between;padding:12px 18px;background:var(--surface2);border-bottom:1px solid var(--border);flex-wrap:wrap;gap:10px}
+    .viewer-title{font-family:var(--fhead);font-weight:700;font-size:1rem;letter-spacing:.08em;text-transform:uppercase}
+    .viewer-controls{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+    .ctrl-btn{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:6px;color:var(--text);font-family:var(--fbody);font-size:.75rem;padding:5px 11px;cursor:pointer;white-space:nowrap;transition:background var(--tr),border-color var(--tr),color var(--tr)}
+    .ctrl-btn:hover{background:rgba(212,160,23,.15);border-color:var(--accent);color:var(--accent)}
+    .viewer-canvas-wrap{position:relative;width:100%;height:clamp(340px,55vw,560px);cursor:grab;background:radial-gradient(ellipse at 40% 40%,#1e1a00 0%,#0a0900 70%)}
+    .viewer-canvas-wrap:active{cursor:grabbing}
+    #three-canvas{display:block;width:100%!important;height:100%!important}
+    #canvas-loader{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;pointer-events:none}
+    .canvas-spinner{width:38px;height:38px;border:3px solid rgba(255,255,255,.1);border-top-color:var(--accent);border-radius:50%;animation:spin .9s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .canvas-loader-text{font-family:var(--fhead);font-size:.8rem;letter-spacing:.1em;color:var(--muted);text-align:center;padding:0 20px}
+    .viewer-hints{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:16px;pointer-events:none;opacity:.55;font-size:.68rem;color:var(--muted);white-space:nowrap}
+    .viewer-infobar{display:flex;align-items:center;justify-content:space-between;padding:10px 18px;border-top:1px solid var(--border);flex-wrap:wrap;gap:8px}
+    .viewer-status{font-size:.72rem;color:var(--muted)}
+    .viewer-status span{color:var(--accent);font-weight:600}
+    .auto-rotate-toggle{display:flex;align-items:center;gap:8px;font-size:.75rem;color:var(--muted);cursor:pointer}
+    .toggle-switch{position:relative;width:34px;height:18px}
+    .toggle-switch input{opacity:0;width:0;height:0}
+    .toggle-track{position:absolute;inset:0;background:var(--surface2);border:1px solid var(--border);border-radius:18px;transition:background var(--tr)}
+    .toggle-thumb{position:absolute;top:2px;left:2px;width:12px;height:12px;background:var(--muted);border-radius:50%;transition:transform .25s,background .25s}
+    .toggle-switch input:checked~.toggle-track{background:rgba(212,160,23,.25);border-color:var(--accent)}
+    .toggle-switch input:checked~.toggle-track .toggle-thumb{transform:translateX(16px);background:var(--accent)}
+
+    /* Drawing */
+    #drawing-section{padding:56px 0}
+    .drawing-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+    .drawing-card-header{padding:14px 20px;background:var(--surface2);border-bottom:1px solid var(--border);font-family:var(--fhead);font-weight:700;font-size:.95rem;letter-spacing:.08em;text-transform:uppercase}
+    .drawing-img-wrap{padding:16px}
+    .drawing-img-wrap img{border-radius:6px;width:100%}
+
+    /* Resources */
+    #resources-section{padding:0 0 64px}
+    .resources-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;margin-top:28px}
+    .resource-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;display:flex;flex-direction:column;gap:10px;transition:border-color var(--tr),transform var(--tr),box-shadow var(--tr)}
+    .resource-card:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 12px 32px rgba(212,160,23,.18)}
+    .resource-icon{width:38px;height:38px;background:rgba(212,160,23,.12);border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .resource-icon svg{color:var(--accent)}
+    .resource-title{font-family:var(--fhead);font-weight:700;font-size:.95rem;letter-spacing:.04em}
+    .resource-desc{font-size:.78rem;color:var(--muted);line-height:1.5}
+    .resource-link{display:inline-flex;align-items:center;gap:6px;font-size:.76rem;font-weight:600;color:var(--accent);margin-top:auto;transition:gap var(--tr)}
+    .resource-card:hover .resource-link{gap:10px}
+
+    /* Footer */
+    footer{background:var(--surface);border-top:1px solid var(--border);padding:28px 20px;text-align:center}
+    /* View counter */
+    .view-counter{display:inline-flex;align-items:center;gap:8px;font-family:var(--fhead);font-size:.78rem;font-weight:600;letter-spacing:.08em;color:var(--muted);background:var(--surface2);border:1px solid var(--border);border-radius:20px;padding:4px 14px;margin-top:10px}
+    .view-counter svg{color:var(--accent);flex-shrink:0}
+    .view-counter-num{color:var(--accent);font-size:.9rem;font-weight:700;min-width:40px;text-align:center;transition:all .4s ease}
+    .footer-inner{max-width:1100px;margin:0 auto}
+    .footer-logo{font-family:var(--fhead);font-size:1.1rem;font-weight:700;letter-spacing:.08em}
+    .footer-logo span{color:var(--accent)}
+    .footer-copy{font-size:.75rem;color:var(--muted);margin-top:8px}
+    .footer-copy a{color:var(--accent)}
+
+    @media(max-width:768px){
+      .site-nav{display:none}
+      .hamburger{display:flex}
+      .viewer-hints{display:none}
+      .ctrl-btn span{display:none}
+      .ctrl-btn{padding:6px}
+    }
+  </style>
+</head>
+<body>
+
+<div id="loading-screen">
+  <div class="loader-logo">TKMC WORKSHOP</div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+</div>
+
+<header id="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="header-logo">
+      <img src="../images/mechanicalWorkshop.png" alt="TKMC Mechanical Workshop" width="140" height="36" />
+    </a>
+    <div class="nav-div"></div>
+    <nav class="site-nav">
+      <a href="../cncLathe/index.html" class="active">Lathe</a>
+      <a href="../cncMillingSub/index.html">Milling Sub</a>
+      <a href="../cncMilling/index.html">Milling</a>
+      <a href="../toolAndCutterGrinding/index.html">Cutter Grinding</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="../cncLathe/index.html" class="active">Lathe</a>
+    <a href="../cncMillingSub/index.html">Milling Sub</a>
+    <a href="../cncMilling/index.html">Milling</a>
+    <a href="../toolAndCutterGrinding/index.html">Tool &amp; Cutter Grinding</a>
+  </nav>
+</header>
+
+<section id="hero">
+  <div class="slide active"><img src="../images/06.jpg" alt="Workshop overview"    loading="eager"/><div class="slide-overlay"></div></div>
+  <div class="slide"><img src="../images/01.jpg" alt="CNC machining"          loading="lazy"/><div class="slide-overlay"></div></div>
+  <div class="slide"><img src="../images/02.jpg" alt="Workshop machinery"      loading="lazy"/><div class="slide-overlay"></div></div>
+  <div class="slide"><img src="../images/03.jpg" alt="Lathe workpiece"        loading="lazy"/><div class="slide-overlay"></div></div>
+  <div class="slide"><img src="../images/04.jpg" alt="CNC lathe operation"    loading="lazy"/><div class="slide-overlay"></div></div>
+  <div class="slide"><img src="../images/05.jpg" alt="Precision machining"    loading="lazy"/><div class="slide-overlay"></div></div>
+  <button class="slide-nav-btn prev" id="slide-prev">&#8592;</button>
+  <button class="slide-nav-btn next" id="slide-next">&#8594;</button>
+  <div class="slide-indicators">
+    <span class="dot active" onclick="goSlide(0)"></span>
+    <span class="dot"        onclick="goSlide(1)"></span>
+    <span class="dot"        onclick="goSlide(2)"></span>
+    <span class="dot"        onclick="goSlide(3)"></span>
+    <span class="dot"        onclick="goSlide(4)"></span>
+    <span class="dot"        onclick="goSlide(5)"></span>
+  </div>
+</section>
+
+<main>
+<section id="viewer-section">
+  <div class="page-wrap">
+    <div class="section-label">Interactive 3D</div>
+    <h1 class="section-title">CNC Lathe – 3D Model</h1>
+    <div class="viewer-card" style="margin-top:24px">
+      <div class="viewer-topbar">
+        <div class="viewer-title">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline-block;vertical-align:-2px;margin-right:6px;color:var(--accent)"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          3D Viewer
+        </div>
+        <div class="viewer-controls">
+          <button class="ctrl-btn" id="btn-reset">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.93"/></svg>
+            <span>Reset</span>
+          </button>
+          <button class="ctrl-btn" id="btn-autofit">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+            <span>Auto-fit</span>
+          </button>
+          <button class="ctrl-btn" id="btn-top">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="2" x2="12" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+            <span>Top</span>
+          </button>
+          <button class="ctrl-btn" id="btn-front">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+            <span>Front</span>
+          </button>
+          <button class="ctrl-btn" id="btn-side">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+            <span>Side</span>
+          </button>
+          <button class="ctrl-btn" id="btn-fs">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+            <span>Fullscreen</span>
+          </button>
+        </div>
+      </div>
+      <div class="viewer-canvas-wrap" id="viewer-wrap">
+        <canvas id="three-canvas"></canvas>
+        <div id="canvas-loader">
+          <div class="canvas-spinner"></div>
+          <div class="canvas-loader-text" id="loader-text">Loading 3D Model…</div>
+        </div>
+        <div class="viewer-hints">
+          <span>🖱 Drag — Rotate</span>
+          <span>⚙ Scroll — Zoom</span>
+          <span>🖱 Right-drag — Pan</span>
+        </div>
+      </div>
+      <div class="viewer-infobar">
+        <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+          <div class="viewer-status">Status: <span id="status-text">Loading…</span></div>
+          <div class="view-counter" title="Total page views">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            <span id="view-count" class="view-counter-num">—</span>
+            <span>views</span>
+          </div>
+        </div>
+        <label class="auto-rotate-toggle">
+          <span>Auto-rotate</span>
+          <div class="toggle-switch">
+            <input type="checkbox" id="auto-rotate-toggle" checked />
+            <div class="toggle-track"><div class="toggle-thumb"></div></div>
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="drawing-section">
+  <div class="page-wrap">
+    <div class="section-label">Technical Reference</div>
+    <h2 class="section-title">Engineering Drawing</h2>
+    <div class="drawing-card" style="margin-top:24px">
+      <div class="drawing-card-header">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline-block;vertical-align:-2px;margin-right:6px;color:var(--accent)"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        CNC Lathe – Engineering Drawing
+      </div>
+      <div class="drawing-img-wrap">
+        <img src="./Engineering Drawing.jpg" alt="CNC Lathe engineering drawing" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="resources-section">
+  <div class="page-wrap">
+    <div class="section-label">Downloads &amp; Learning</div>
+    <h2 class="section-title">Resources</h2>
+    <div class="resources-grid">
+      <a href="https://youtu.be/RrjOVsi-XHs?si=Bn00ImYRr6VkLKff" target="_blank" rel="noopener noreferrer" class="resource-card">
+        <div class="resource-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+        <div class="resource-title">Video Tutorial</div>
+        <div class="resource-desc">Complete CNC lathe operation walkthrough on YouTube.</div>
+        <div class="resource-link">Watch now <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+      </a>
+      <a href="./lathe.pdf" target="_blank" rel="noopener" class="resource-card">
+        <div class="resource-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+        <div class="resource-title">Process Guide</div>
+        <div class="resource-desc">Step-by-step CNC lathe machining workflow PDF.</div>
+        <div class="resource-link">Download PDF <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+      </a>
+      <a href="./sampleQuestionsLathe.pdf" target="_blank" rel="noopener" class="resource-card">
+        <div class="resource-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+        <div class="resource-title">Sample Questions</div>
+        <div class="resource-desc">Practice exam questions for CNC lathe assessments.</div>
+        <div class="resource-link">Download PDF <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+      </a>
+      <a href="./modelQuestionsLathe.pdf" target="_blank" rel="noopener" class="resource-card">
+        <div class="resource-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        <div class="resource-title">Model Q&amp;A</div>
+        <div class="resource-desc">Model questions with detailed answers for exam prep.</div>
+        <div class="resource-link">Download PDF <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+      </a>
+      <a href="https://youtube.com/playlist?list=PLtw97_u_q2htmLj8iHorb3jEgDHC8eSfT&si=ysrQ7-bJegN9ysjs" target="_blank" rel="noopener noreferrer" class="resource-card">
+        <div class="resource-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg></div>
+        <div class="resource-title">Reference Playlist</div>
+        <div class="resource-desc">Extended YouTube reference videos and learning material.</div>
+        <div class="resource-link">Browse <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">TKMC <span>WORKSHOP</span></div>
+    <p class="footer-copy">&copy; 2024 &mdash; Created by <a href="https://machinisthands.blogspot.com/" target="_blank" rel="noopener">Machinist Hands</a></p>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════
+  Three.js loaded as ES MODULE — this is the key fix.
+  GLTFLoader runs on the main thread with no Worker,
+  so the DataCloneError (postMessage) never happens.
+  Works when served from any local or remote web server.
+  Run locally: python -m http.server  OR  npx serve .
+════════════════════════════════════════════════════ -->
+<script type="importmap">
+{
+  "imports": {
+    "three":         "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+
+<script>
+/* Loading screen */
+window.addEventListener('load', () => {
+  const ls = document.getElementById('loading-screen');
+  ls.classList.add('hidden');
+  setTimeout(() => ls.remove(), 600);
+});
+/* Mobile nav */
+const hbg = document.getElementById('hamburger');
+const mnv = document.getElementById('mobile-nav');
+hbg.addEventListener('click', () => {
+  const o = mnv.classList.toggle('open');
+  hbg.classList.toggle('open', o);
+  hbg.setAttribute('aria-expanded', o);
+});
+/* Slideshow */
+let si = 0, st = null;
+const sls = document.querySelectorAll('.slide');
+const dts = document.querySelectorAll('.dot');
+function showSlide(n) {
+  sls.forEach(s => s.classList.remove('active'));
+  dts.forEach(d => d.classList.remove('active'));
+  si = (n + sls.length) % sls.length;
+  sls[si].classList.add('active');
+  dts[si].classList.add('active');
+}
+function goSlide(n) { clearInterval(st); showSlide(n); st = setInterval(() => showSlide(si+1), 4000); }
+document.getElementById('slide-next').onclick = () => goSlide(si+1);
+document.getElementById('slide-prev').onclick = () => goSlide(si-1);
+st = setInterval(() => showSlide(si+1), 4000);
+
+/* ── View counter (localStorage) ── */
+(function(){
+  const KEY = 'tkmc_cnc_lathe_views';
+  const el  = document.getElementById('view-count');
+  if (!el) return;
+  let count = parseInt(localStorage.getItem(KEY) || '0', 10);
+  count++;
+  localStorage.setItem(KEY, count);
+  // Animate count up
+  let start = Math.max(0, count - 30), cur = start;
+  const step = () => {
+    cur = Math.min(cur + Math.ceil((count - cur) / 6 + 1), count);
+    el.textContent = cur.toLocaleString();
+    if (cur < count) requestAnimationFrame(step);
+  };
+  setTimeout(step, 800);
+})();
+
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+import { GLTFLoader }    from 'three/addons/loaders/GLTFLoader.js';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+const wrap      = document.getElementById('viewer-wrap');
+const canvasEl  = document.getElementById('three-canvas');
+const loaderEl  = document.getElementById('canvas-loader');
+const loaderTxt = document.getElementById('loader-text');
+const statusTxt = document.getElementById('status-text');
+const autoTgl   = document.getElementById('auto-rotate-toggle');
+
+/* Renderer */
+const renderer = new THREE.WebGLRenderer({ canvas: canvasEl, antialias: true, alpha: true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type    = THREE.PCFSoftShadowMap;
+
+/* Scene */
+const scene = new THREE.Scene();
+
+/* Camera */
+const camera = new THREE.PerspectiveCamera(40, wrap.clientWidth / wrap.clientHeight, 0.01, 10000);
+camera.position.set(0, 50, 300);
+
+/* Lights */
+scene.add(new THREE.AmbientLight(0xffffff, 0.6));
+const sun = new THREE.DirectionalLight(0xfff4e0, 1.5);
+sun.position.set(100, 200, 150);
+sun.castShadow = true;
+scene.add(sun);
+const fill = new THREE.DirectionalLight(0x6080ff, 0.35);
+fill.position.set(-100, -60, -120);
+scene.add(fill);
+
+/* OrbitControls — smooth damped orbit + pan + zoom */
+const controls = new OrbitControls(camera, wrap);
+controls.enableDamping    = true;
+controls.dampingFactor    = 0.07;
+controls.screenSpacePanning = true;
+controls.minDistance      = 1;
+controls.maxDistance      = 5000;
+controls.autoRotate       = true;
+controls.autoRotateSpeed  = 1.2;
+
+/* Load GLTF */
+let modelSphere = null;
+
+new GLTFLoader().load(
+  './3D Model.gltf',
+  (gltf) => {
+    scene.add(gltf.scene);
+    // Centre model at origin
+    const box = new THREE.Box3().setFromObject(gltf.scene);
+    const c   = new THREE.Vector3();
+    box.getCenter(c);
+    gltf.scene.position.sub(c);
+    modelSphere = box.getBoundingSphere(new THREE.Sphere());
+    modelSphere.center.set(0, 0, 0);
+    // Frame camera
+    const r = modelSphere.radius;
+    camera.position.set(r * 0.4, r * 0.6, r * 2.6);
+    controls.target.set(0, 0, 0);
+    controls.minDistance = r * 0.05;
+    controls.maxDistance = r * 20;
+    controls.update();
+    loaderEl.style.display = 'none';
+    statusTxt.textContent  = 'Model loaded';
+  },
+  (xhr) => {
+    const pct = xhr.total ? Math.round(xhr.loaded / xhr.total * 100) + '%' : '…';
+    loaderTxt.textContent = `Loading 3D Model… ${pct}`;
+    statusTxt.textContent = `Loading… ${pct}`;
+  },
+  () => {
+    loaderTxt.textContent = '⚠ Model file not found. Place "3D Model.gltf" in the cncLathe/ folder and open via a web server.';
+    statusTxt.textContent = 'File missing';
+  }
+);
+
+/* Helpers */
+function getR() { return modelSphere ? modelSphere.radius : 200; }
+
+/* Toolbar */
+document.getElementById('btn-reset').onclick = () => {
+  const r = getR();
+  camera.position.set(r*.4, r*.6, r*2.6);
+  controls.target.set(0,0,0);
+  controls.autoRotate = true;
+  autoTgl.checked = true;
+  controls.update();
+};
+document.getElementById('btn-autofit').onclick = () => {
+  const r = getR();
+  camera.position.set(r*.4, r*.6, r*2.6);
+  controls.target.set(0,0,0);
+  controls.update();
+};
+document.getElementById('btn-top').onclick = () => {
+  const r = getR();
+  camera.position.set(0, r*3, 0.001);
+  controls.target.set(0,0,0);
+  controls.autoRotate = false; autoTgl.checked = false;
+  controls.update();
+};
+document.getElementById('btn-front').onclick = () => {
+  const r = getR();
+  camera.position.set(0, 0, r*3);
+  controls.target.set(0,0,0);
+  controls.autoRotate = false; autoTgl.checked = false;
+  controls.update();
+};
+document.getElementById('btn-side').onclick = () => {
+  const r = getR();
+  camera.position.set(r*3, 0, 0);
+  controls.target.set(0,0,0);
+  controls.autoRotate = false; autoTgl.checked = false;
+  controls.update();
+};
+document.getElementById('btn-fs').onclick = () => {
+  if (!document.fullscreenElement) wrap.requestFullscreen().catch(()=>{});
+  else document.exitFullscreen();
+};
+
+autoTgl.addEventListener('change', () => { controls.autoRotate = autoTgl.checked; });
+
+/* Stop auto-rotate on manual interaction */
+wrap.addEventListener('pointerdown', () => { controls.autoRotate = false; autoTgl.checked = false; });
+
+/* Keyboard shortcuts */
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'INPUT') return;
+  if (e.key.toLowerCase() === 'r') document.getElementById('btn-reset').click();
+  if (e.key.toLowerCase() === 'f') document.getElementById('btn-autofit').click();
+});
+
+/* Resize */
+function onResize() {
+  const w = wrap.clientWidth, h = wrap.clientHeight;
+  renderer.setSize(w, h, false);
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+}
+window.addEventListener('resize', onResize);
+document.addEventListener('fullscreenchange', onResize);
+onResize();
+
+/* Render loop */
+(function tick() {
+  requestAnimationFrame(tick);
+  controls.update();
+  renderer.render(scene, camera);
+})();
+</script>
+
+</body>
+</html>
